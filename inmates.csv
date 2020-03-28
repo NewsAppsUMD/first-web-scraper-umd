@@ -1,200 +1,641 @@
-Last,First,Middle,Gender,Race,Age,City,State
-Adam,Ahmed,Abubaker,M,B,29,Columbia,MO
-Anderson,Isaiah,Dwight,M,B,18,Columbia,MO
-Anderson,Michael,Leon,M,B,23,Columbia,MO
-Armendarez,Leonel,,M,H,32,Columbia,MO
-Baker,Cody,Marshall,M,W,32,Ashland,MO
-Ball,Reginald,Eric,M,B,45,Columbia,MO
-Banks,Antonio,Laron,M,B,22,Jefferson City,MO
-Barney,Shaneika,Renne,F,B,26,Columbia,MO
-Berends,Lorrie,Ann,F,W,56,Columbia,MO
-Berryhill,Theodore,Bud,M,W,56,Columbia,MO
-Birmingham,Andrew,Ryan,M,W,19,Auvasse,MO
-Black,Aaron,Liam James,M,B,20,Columbia,MO
-Bowen,Steven,Wayne,M,W,43,Columbia,MO
-Breaux,Jason,Allen,M,W,32,Eldon,MO
-Broderick,James,Edward,M,W,43,Columbia,MO
-Brookins,Gary,Laren,M,B,56,Columbia,MO
-Brown,Mattie,Lynn,F,W,20,Columbia,MO
-Brown,Terrell,,M,B,41,Columbia,MO
-Bryant,Randi-Jo,Nikole,F,W,21,Columbia,MO
-Bryant,Ronald,Dean,M,W,70,Columbia,MO
-Buck,Robert,Lindsey,M,W,49,Columbia,MO
-Carpenter,Christopher,James,M,W,19,Ashland,MO
-Carter,Demarco,Raydell,M,B,19,Columbia,MO
-Cheatum,Damerian,Creshwn,M,B,18,Columbia,MO
-Chirciu,Stepan,,M,W,22,North Highlands,CA
-Clark,Kimberly,Dawn,F,W,38,Columbia,MO
-Clark,Marcus,Terile,M,B,31,Columbia,MO
-Commander,Javante,Bruce,M,B,19,Columbia,MO
-Contreras-Cornejo,Oscar,Antonio,M,W,27,Columbia,MO
-Cook,Michael,Steven,M,W,32,Mexico,MO
-Courtney,Benjamin,David,M,W,29,Moberly,MO
-Courtney,Melissa,Jean,F,W,31,Moberly,MO
-Crain,Matthew,Craig,M,W,21,Columbia,MO
-Curl,Patrick,Lee,M,W,44,Columbia,MO
-Curtis,Jamaar,Lamont,M,B,32,Hazelwood,MO
-Dalton,Neil,Lance,M,W,26,Columbia,MO
-Dalton,Timothy,Brian,M,W,19,Columbia,MO
-Davenport,Michelle,Ann,F,W,47,Sedalia,MO
-Davis,Jason,Robert,M,B,32,Columbia,MO
-Denny,Deandre,Lavelle,M,B,17,Columbia,MO
-Dexter,Karen,Elizabeth,F,W,43,Centralia,MO
-Dyer,Eugenia,Mitchell,F,B,37,Columbia,MO
-Eaves,Carl,Jason,M,W,50,Columbia,MO
-Edwards,Darrius,Kendal,M,B,22,Kansas City,MO
-Egosin,Constantin,,M,W,21,Columbia,MO
-Ellis,Ryan,Paul Johannes,M,W,27,Ponte Vedra beach,FL
-Enloe,Joshua,James,M,W,35,Sellsberry,MO
-Fagot,John,Paul,M,W,59,Columbia,MO
-Farley,Cody,Ray,M,W,22,Columbia,MO
-Fisher,Donald,Wayne,M,W,63,Ashland,MO
-Fisher,Mitchell,Charles,M,W,24,Clark,MO
-Fobes,Dustin,Patrick,M,W,27,Columbia,MO
-Foreman,Chauncy,Jay,M,B,22,Columbia,MO
-Freeman,Jennifer,Renee,F,W,34,Columbia,MO
-Gaudette,Jesse,James,M,W,37,Boonville,MO
-Gillom,Kenneth,Anthony,M,B,26,Columbia,MO
-Gilpin,James,Edward,M,W,33,Columbia,MO
-Girdner,Jaimee,Lynn,F,W,19,Columbia,MO
-Glenk,Zachary,Allen,M,W,17,Columbia,MO
-Glispie,David,James,M,B,24,Columbia,MO
-Green,George,Edwin,M,W,66,Centralia,MO
-Haley,Samuel,Earnest,M,B,41,Columbia,MO
-Hall,Brian,Timothy,M,W,50,Columbia,MO
-Hamilton,Kyle,David,M,W,20,Columbia,MO
-Harper,Gregory,Thomas,M,B,22,Columbia,MO
-Harrington,Joshua,Ray,M,W,24,Columbia,MO
-Harris,Aaron,,M,B,21,Columbia,MO
-Harris,Ahmonta,Marqiuse,M,B,22,Columbia,MO
-Harris,David,Lee,M,B,25,Columbia,MO
-Hathman,William,Jack-Wilson,M,W,26,Ashland,MO
-Havrum,Lisa,Ann,F,W,48,Columbia,MO
-Hawkins,Keenan,Andrew,M,B,19,Columbia,MO
-Hawkins,Kerry,Lane,M,W,52,Columbia,MO
-Hayes,Teka,Lynn,F,B,50,Columbia,MO
-Hayse,Kaylen,Jared,M,B,17,Columbia,MO
-Hennings,Kevin,Eric,M,B,51,Kansas City,MO
-Hester,Anthony,Tyrone,M,B,50,Columbia,MO
-Hillyard,Jonathan,Randall,M,W,30,Columbia,MO
-Hoffman,Timothy,Roland,M,B,36,Columbia,MO
-Hofius,Nathan,Matthew,M,W,35,Columbia,MO
-Horn,Courtney,Michelle,F,W,39,Columbia,MO
-Houston,William,Matthew,M,W,36,Moberly,MO
-Hulen,Daniel,Scott,M,W,26,Ashland,MO
-Jackson,Merrill Jr,Gene,M,B,66,Columbia,MO
-Jacobs,Quillan,Eugene,M,B,23,Columbia,MO
-Joe,Deangelo,Wayne,M,B,20,Columbia,MO
-Johnson,Marilyn,Rachelle,F,I,27,Columbia,MO
-Johnson,Montreil,Donell,M,B,29,Columbia,MO
-Johnson,Raven,Claire,F,W,35,Columbia,MO
-Johnson,Richard Jr,,M,B,20,Columbia,MO
-Jones,Bryan,Michael,M,W,24,Columbia,MO
-Jones,Curtis,Dale,M,B,50,Columbia,MO
-Jones,Jessica,Monteria,F,B,24,Columbia,MO
-Jones,Tony,Dean,M,W,23,Sturgeon,MO
-Jordan,Marcus,Dion,M,B,38,Columbia,MO
-Keller,Megan,Suzanne,F,W,32,Columbia,MO
-Kendrick,Larry,Neal,M,W,42,Columbia,MO
-Key,Charles,Trevion,M,B,21,Columbia,MO
-Kim,Thomas,Sung Gun,M,A,17,Columbia,MO
-Kitchen,Kaine,Gerald,M,B,18,Columbia,MO
-Knapp,Oliver,David,M,W,31,Columbia,MO
-Laddusaw,Preston,Kyle,M,W,21,Columbia,MO
-Laverty,Daniel,John,M,W,33,Columbia,MO
-Lawrence,Terrell,Marquise,M,B,17,Columbia,MO
-Lemley,Tyrel,James,M,W,29,El Dorado springs,MO
-Lewis,Casey,Duane,M,I,25,Stonewall,OK
-Lopez-Mendez,Luis,Antonio,M,H,20,Columbia,MO
-Magers,Jody,J.,M,W,41,Anamosa,IA
-Marine,Lashanda,Seon,F,B,23,Columbia,MO
-Marshall,Tammy,Michelle,F,W,38,Columbia,MO
-Marshall,Willie,Charles,M,B,60,Kansas City,MO
-Matney,Eva,Louise,F,W,25,Columbia,MO
-McConnell,Paul,Dean,M,W,67,Columbia,MO
-McGee,Lequanda,Isaigh,M,B,20,Columbia,MO
-McGrath,Rusty,Allen,M,W,19,Columbia,MO
-McNeal,Dannie,Lee,M,B,46,Columbia,MO
-McTye,Kishjuane,Randall,M,B,17,Columbia,MO
-Mears,Christopher,Brett,M,W,36,Auxvasse,MO
-Meeker,Laith,Alan,M,W,24,Columbia,MO
-Melton,Octavia,Marie,F,W,29,Fulton,MO
-Midgyett,Timothy,Scott,M,B,44,Columbia,MO
-Millard,Matthew,Thomas,M,W,27,Fulton,MO
-Miller,Elizabeth,Christine,F,W,32,Fulton,MO
-Milligan,Adam,Robert,M,W,22,Jefferson City,MO
-Mistler,Garry,Marlan,M,W,50,Foristell,MO
-Mitchell,Wil,Edwards,M,W,41,Columbia,MO
-Mohamed,Abdulrazak,Ali,M,U,29,Columbia,MO
-Monroe,Samuel,Armstrong,M,B,66,Columbia,MO
-Moore,David,Allan,M,W,26,Columbia,MO
-Murphy,Laanthony,Deone,M,B,25,Columbia,MO
-Murphy,Timothy,Andrew,M,W,41,Columbia,SC
-Nelson,Antonio,Portai,M,B,26,Columbia,MO
-Obannon,Nathan,James,M,W,31,Columbia,MO
-Parrick,Richard,Lee,M,W,24,Columbia,MO
-Perkins,Larry,Lee,M,W,50,Columbia,MO
-Perrique-Dunlap,Cameron,Michael,M,W,25,Columbia,MO
-Perry,Antonio,Bamon,M,B,31,Columbia,MO
-Polinski,David,Andrew,M,W,28,Columbia,MO
-Porter,Deangelo,Nicholas,M,B,23,Columbia,MO
-Powell,John,Joe,M,W,37,Hallsville,MO
-Powell,Paul,Dawayne,M,W,53,Columbia,MO
-Prince,Moneka,Marie,F,B,30,Columbia,MO
-Prince,Sheaun,Dicarlo,M,B,23,Columbia,MO
-Rainey,Jonathan,Edward,M,B,21,Columbia,MO
-Randolph,Edmond,Nero,M,B,23,Columbia,MO
-Reeves,Patricia,Lynn,F,W,47,St Peters,MO
-Renfro,Gregory,Antjuan,M,B,32,Columbia,MO
-Riddle,Curtis,Arthur,M,W,24,Columbia,MO
-Riles,Lawrin,Preston,M,B,35,Columbia,MO
-Robertson,Paul,Russell,M,W,43,Columbia,MO
-Robles,Demetri,Timothy,M,H,19,Columbia,MO
-Rousset,Quarry,Lee,M,W,37,Columbia,MO
-Rowland,Donald,Marvin,M,W,88,Columbia,MO
-Ruganzu,Aimable,,M,B,26,Columbia,MO
-Ryan,Olajawan,Leonard,M,B,26,Columbia,MO
-Secundino,Elgar,Ivan,M,H,22,Columbia,MO
-Shalnev,Irina,,F,W,24,Sacramento,CA
-Shaw,Damien,Baker,M,W,32,Columbia,MO
-Sheets,Alfred,Reggie,M,B,38,Columbia,MO
-Shegog,Anthony,Lamarr,M,B,57,Columbia,MO
-Shepherd,Kyle,Anthony,M,B,22,Columbia,MO
-Silverwood,Anthony,Alexander,M,W,42,Columbia,MO
-Simmons,Chadwick,James,M,W,33,Columbia,MO
-Simmons,Josy,Nicole,F,W,23,Liberty,MO
-Simmons,Torrence,Darnell,M,B,41,Columbia,MO
-Simon,Carl,Douglas,M,B,27,Kansas City,MO
-Sims,Michael,Edward,M,B,62,Columbia,MO
-Slaughter,David,Dale,M,W,24,Columbia,MO
-Smiley,Sammie,Lee,M,B,30,Columbia,MO
-Smith,Billy,Ray,M,W,26,Columbia,MO
-Smith,Deshawn,Dupree,M,B,37,Columbia,MO
-Smith,Marcus,Montez,M,B,42,Columbia,MO
-Smothermon,Wesley,Lewis,M,W,35,Kansas City,MO
-Snell,Christopher,Allen,M,W,25,Columbia,MO
-Soto,Vicente,Agustin,M,H,27,Kirksville,MO
-Steele,Raquelle,Joneen,F,B,25,Columbia,MO
-Stewart,Harold,Wayne,M,W,50,Columbia,MO
-Stokes,Willis,Daniel,M,W,54,Columbia,MO
-Sullivan,Skyler,Patrick,M,W,28,Col,MO
-Tatum,Demetrice,Marquez,M,B,29,Fulton,MO
-Thompson,James,Robert,M,W,25,Columbia,MO
-Threet,James,Allen,M,W,29,Columbia,MO
-Tinker,Charles,Zachary,M,W,26,Centralia,MO
-Tolston,Donzell,Lurell,M,B,22,Columbia,MO
-Turney,Robert,George,M,W,45,Bluffton,IN
-Veach,Jerry,Lee,M,W,43,Columbia,MO
-Walls,Kentis,Marquis,M,B,23,Columbia,MO
-Webb,James,Fernando,M,B,21,Columbia,MO
-Webster,Derrick,Orlando,M,B,36,Columbia,MO
-Webster,Joshua,Micah Lee,M,B,31,Columbia,MO
-Whitley,Michael,Isaiah,M,B,26,Columbia,MO
-Whitmarsh,Kristina,Marie,F,W,25,El Dorardo,MO
-Wilkins,Carloss,Lamont,M,B,19,Columbia,MO
-Wilson,Krystle,Chanel,F,W,21,Columbia,MO
-Woodrum,Bradley,Allen,M,W,29,Columbia,MO
-Woods,Randy,William,M,W,28,Fulton,MO
-Wright,Timothy,Lewis,M,B,42,Columbia,MO
-Young,Demetrius,Terrell,M,B,36,Columbia,MO
-Zyk,Parker,Thomas,M,W,19,Columbia,MO
+Last,First,Middle,Suffix,Gender,Race,Age,City,State
+ADAMS,MICHEAL,CADE, ,M,W,32,COLUMBIA,MO,"
+ Details
+"
+AHMED,ELSADIG,IBRAHIM SALIH, ,M,B,34,COLUMBIA,MO,"
+ Details
+"
+ALCALA,NICK,ALREDO, ,M,W,45,POPLAR BLUFF,MO,"
+ Details
+"
+AUNGERER,MARK,CHARLES, ,M,W,53,COLUMBIA,MO,"
+ Details
+"
+AUSTIN,RICHARD,TYWAN, ,M,B,44,VALDOSTA,GA,"
+ Details
+"
+BAILEY,STACEY,MARIE, ,F,W,36,ASHLAND,MO,"
+ Details
+"
+BALDWIN,SAM, ,IV,M,B,28,COLUMBIA,MO,"
+ Details
+"
+BANKS,TIMOTHY,MAURICE, ,M,B,39,KANSAS CITY,MO,"
+ Details
+"
+BARAJAS-REAL,EUSEBIO,DANIEL, ,M,W,29,ASHLAND,MO,"
+ Details
+"
+BARNEY,FREDERICK,JR, ,M,B,35,COLUMBIA,MO,"
+ Details
+"
+BATISTE,WALTER,ALLEN, ,M,B,29,ST.LOUIS,MO,"
+ Details
+"
+BELL,GERALD,LEE, ,M,W,39,CENTRALIA,MO,"
+ Details
+"
+BENZ,WILLIAM,ERNEST, ,M,W,31,COLUMBIA,MO,"
+ Details
+"
+BERARDI,DEBORAH,EVA, ,F,W,58,COLUMBIA,MO,"
+ Details
+"
+BIGGS,SHAWN,BLAIN, ,M,W,33,COLUMBIA,MO,"
+ Details
+"
+BILDERBACK,BRETT,WAYNE, ,M,W,43,COLUMBIA,MO,"
+ Details
+"
+BOAZ,ADAM,RHEA, ,M,W,29,COLUMBIA,MO,"
+ Details
+"
+BOLEY,JASON,LEE, ,M,W,41,COLUMBIA,MO,"
+ Details
+"
+BOMBACK,RICHARD,JASON, ,M,W,33,OWENSVILLE,MO,"
+ Details
+"
+BONAPARTE,FRANK,CORTEZ, ,M,B,38,COLUMBIA,MO,"
+ Details
+"
+BRADFORD,JEFFREY,WAYNE, ,M,W,39,COLUMBIA,MO,"
+ Details
+"
+BRASHIER,APRIL,RAE, ,F,W,45,COLUMBIA,MO,"
+ Details
+"
+BREEDLOVE,WILLIAM,LEE, ,M,W,57,COLUMBIA,MO,"
+ Details
+"
+BRIMMAGE,CORTEZ,LORENZO, ,M,B,29,COLUMBIA,MO,"
+ Details
+"
+BROWN,DEVIN,RICHARD, ,M,W,19,AUXVASSE,MO,"
+ Details
+"
+BROWN,LARNELL,D, ,M,B,50,COLUMBIA,MO,"
+ Details
+"
+BURKS,HUNTER,TRAVIS, ,M,W,24,COLUMBIA,MO,"
+ Details
+"
+CALMESE,ANDREW,MARTIN, ,M,B,35,COLUMBIA,MO,"
+ Details
+"
+CALVIN,DUSTIN,STARR, ,F,W,39,KANSAS CITY,KS,"
+ Details
+"
+CARTAGENA,FERNANDO,TITO, ,M,W,26,COLUMBIA,MO,"
+ Details
+"
+CARTER,CHRISTOPHER,LEONARD, ,M,B,22,KANSAS CITY,MO,"
+ Details
+"
+CARVER,DEBRA,JEAN, ,F,W,38,COLUMBIA,MO,"
+ Details
+"
+CHEN,DENGCHENG, , ,M,A,29,COLUMBIA,MO,"
+ Details
+"
+CLARK,KIMBERLY,DAWN, ,F,W,44,COLUMBIA,MO,"
+ Details
+"
+CLARK,RICHARD,DEREK, ,M,W,46,COLUMBIA,MO,"
+ Details
+"
+COBB,MALIK,RONDELL, ,M,B,22,COLUMBIA,MO,"
+ Details
+"
+COLEMAN,TAVON,KAREEM, ,M,B,24,BOONVILLE,MO,"
+ Details
+"
+COLLINS,RENEE,MICHELLE, ,F,W,50,ROCHEPORT,MO,"
+ Details
+"
+COMFORT,KEITH,ALAN, ,M,W,38,LAKE GENEVA,WI,"
+ Details
+"
+COMMANDER,JAVANTE,BRUCE, ,M,B,25,COLUMBIA,MO,"
+ Details
+"
+CONRAD,JONATHAN,DAVID, ,M,W,34,COLUMBIA,MO,"
+ Details
+"
+CORNELISON,BRIAN,LEE, ,M,W,49,COLUMBIA,MO,"
+ Details
+"
+COX,MACKENZIE,PAIGE, ,F,W,29,FENTON,MO,"
+ Details
+"
+CRAWFORD,TREVOR,LEE, ,M,W,26,COLUMBIA,MO,"
+ Details
+"
+CURETON,ERIC,WAYNE, ,M,B,53,COLUMBIA,MO,"
+ Details
+"
+DAVID,DEREK,BRADLY, ,M,W,25,COLUMBIA,MO,"
+ Details
+"
+DAVIS,ANGELA,MAREA, ,F,W,50,ASHLAND,MO,"
+ Details
+"
+DENNIS,STEVEN,LAMAR, ,M,B,39,CHICAGO,IL,"
+ Details
+"
+DEVINE,STEVEN,PATRICK, ,M,W,43,COLUMBIA,MO,"
+ Details
+"
+DOUGLAS,TROY,ALLAN, ,M,W,38,MILAND,TN,"
+ Details
+"
+DRUMMOND,CONNOR,KEITH LEE, ,M,W,24,HALLSVILLE,MO,"
+ Details
+"
+ELDER,JEREMY,MALCOM, ,M,W,34,STURGEON,MO,"
+ Details
+"
+ELLEDGE,JOSEPH,DUANE, ,M,W,24,COLUMBIA,MO,"
+ Details
+"
+ELLIOTT,KENNETH,JAMES, ,M,B,29,COLUMBIA,MO,"
+ Details
+"
+EMMONS,ROBERT,DALE,JR,M,W,37,COLUMBIA,MO,"
+ Details
+"
+EVANS,LUKAS,SHANE, ,M,W,21,COLUMBIA,MO,"
+ Details
+"
+EVERS-BLAGG,CHRISTOPHER,MICHAEL, ,M,W,35,COLUMBIA,MO,"
+ Details
+"
+FARROW,DAVID,FRANCIS, ,M,W,36,COLUMBIA,MO,"
+ Details
+"
+FELTS,MATTHEW,WADE, ,M,W,38,FAYETTE,MO,"
+ Details
+"
+FISHER,CHRISTOPHER,GENE, ,M,W,46,ASHLAND,MO,"
+ Details
+"
+FOTOOHIGHIAM,MEHRDAD, , ,M,U,65,COLUMBIA,MO,"
+ Details
+"
+FRANKLIN,SYLVESTER,LEE,JR,M,B,34,COLUMBIA,MO,"
+ Details
+"
+GAINES,DAMON,DUVALLE,JR,M,B,40,COLUMBIA,MO,"
+ Details
+"
+GALBREATH,LARRY,WESLEY, ,M,B,50,COLUMBIA,MO,"
+ Details
+"
+GIBONEY,ANTHONY,DUANE, ,M,W,57,HARRISBURG,MO,"
+ Details
+"
+GILL,BRANDON,MURDOCK, ,M,W,34,COLUMBIA,MO,"
+ Details
+"
+GILMORE,ERIC,MICHAEL, ,M,B,36,COLUMBIA,MO,"
+ Details
+"
+GLAY,ALEX,JOLO, ,M,B,21,COLUMBIA,MO,"
+ Details
+"
+GODFREY,RIVER,REED, ,M,W,20,INDEPENDENCE,MO,"
+ Details
+"
+GONZALES-PIMENTEL,JUAN,MANUEAL, ,M,U,23,COLUMBIA,MO,"
+ Details
+"
+GRAY,JASON,JERMON, ,M,B,30,COLUMBIA,MO,"
+ Details
+"
+GREEN,MICHAEL,ANTHONY, ,M,B,20,COLUMBIA,MO,"
+ Details
+"
+HACKWORTH,KEVIN,LEE, ,M,W,53,COLUMBIA,MO,"
+ Details
+"
+HALL,ROBERT, , ,M,W,63,ORLANDO,FL,"
+ Details
+"
+HAMILTON,TALIA,CATHERINE, ,F,B,19,COLUMBIA,MO,"
+ Details
+"
+HARNESS,RICHARD,SHAWN, ,M,W,43,COLUMBIA,MO,"
+ Details
+"
+HARRIS,AARON, , ,M,B,27,COLUMBIA,MO,"
+ Details
+"
+HARRIS,STEFAN,LEE, ,M,B,23,COLUMBIA,MO,"
+ Details
+"
+HATTON,ARCHIE,LEE,III,M,B,40,COLUMBIA,MO,"
+ Details
+"
+HATTON,TROY,DALE, ,M,W,49,COLUMBIA,MO,"
+ Details
+"
+HAYES,SHERRICO,JARONE, ,M,B,39,COLUMBIA,MO,"
+ Details
+"
+HENDERSON,DEANDRE,MALIK, ,M,B,20,COLUMBIA,MO,"
+ Details
+"
+HICKMAN,STEPHEN,GUY, ,M,W,38,COLUMBIA,MO,"
+ Details
+"
+HIGGS,THOMAS,STEVE, ,M,B,57,COLUMBIA,MO,"
+ Details
+"
+HILL,DYRAN,RASHAAD, ,M,B,24,COLUMBIA,MO,"
+ Details
+"
+HOEHNE,HERBERT,DEAN, ,M,W,47,COLUMBIA,MO,"
+ Details
+"
+HOLLENBERG,NEELEY,D, ,F,W,42,COLUMBIA,MO,"
+ Details
+"
+HOLLEY,JUSTIN,RANDALL, ,M,W,31,CENTRALIA,MO,"
+ Details
+"
+HOUSTON,JOSHUA,ALAN, ,M,B,30,COLUMBIA,MO,"
+ Details
+"
+HOWARD,SHIREE,KANDECE, ,F,B,39,COLUMBIA,MO,"
+ Details
+"
+HOWERY,JUSTIN,VAN, ,M,W,30,COLUMBIA,MO,"
+ Details
+"
+HULETT,WADE,PHILLIP, ,M,W,28,COLUMBIA,MO,"
+ Details
+"
+HUNT,CALEB,DEVINE, ,M,B,22,COLUMBIA,MO,"
+ Details
+"
+HUNT,DAMION,DEMONE, ,M,B,27,COLUMBIA,MO,"
+ Details
+"
+HUNT,MICHAEL,EARL, ,M,B,39,COLUMBIA,MO,"
+ Details
+"
+HUNT,TOIYONTE`,DEMIEL, ,M,B,26,COLUMBIA,MO,"
+ Details
+"
+HURTADO,GILBERTO,GUADALUPE, ,M,U,33,CALIFORNIA,MO,"
+ Details
+"
+HUTCHISON,JAMIE,DEAN, ,M,W,43,BOOVILLE,MO,"
+ Details
+"
+IRVING,PIERRE,ALFONSO,JR,M,B,51,COLUMBIA,MO,"
+ Details
+"
+JACKSON,JAMIE,ANTON, ,M,B,18,COLUMBIA,MO,"
+ Details
+"
+JAMERSON,BRANDON,LEE, ,M,B,35,COLUMBIA,MO,"
+ Details
+"
+JAMES,KELSEY,AARON, ,M,U,30,COLUMBIA,MO,"
+ Details
+"
+JAMES,MICHAEL,ANTHONY, ,M,B,50,COLUMBIA,MO,"
+ Details
+"
+JENNINGS,RANDY,LEE, ,M,B,54,COLUMBIA,MO,"
+ Details
+"
+JOHNSON,CHRISTOPHER,LEE, ,M,B,39,CAPE GIRARDEAU,MO,"
+ Details
+"
+JOHNSON,RICHARD, , ,M,B,26,COLUMBIA,MO,"
+ Details
+"
+JONES,COLLANEICE,COLLANAY KAWANA, ,F,B,21,NEW ORLEANS,LA,"
+ Details
+"
+JONES,DONTREZ,TERRELL,MR,M,B,33,COLUMBIA,MO,"
+ Details
+"
+JONES,EDWARD,CORTEZ, ,M,B,36,COLUMBIA,MO,"
+ Details
+"
+JOST,JEFFERY,BLAINE, ,M,W,57,COLUMBIA,MO,"
+ Details
+"
+KENNEY,LAWRENCE,STANLEY, ,M,B,52,COLUMBIA,MO,"
+ Details
+"
+KHAN,JESSICA,LEIGH, ,F,W,37,COLUMBIA,MO,"
+ Details
+"
+KILFOIL,ELIZABETH,ANN, ,F,W,56,COLUMBIA,MO,"
+ Details
+"
+KLIETHERMES,CALE,JOSEPH, ,M,W,41,COLUMBIA,MO,"
+ Details
+"
+KNIGHT,CHRISTOPHER,EUGENE, ,M,B,40,WICHITA,KS,"
+ Details
+"
+LAMBERT,KEVIN,JOSEPH, ,M,B,30,COLUMBIA,MO,"
+ Details
+"
+LAWHORN,JAVION,MARTUE, ,M,B,30,COLUMBIA,MO,"
+ Details
+"
+LAWRENCE,TERRELL,MARQUISE, ,M,B,22,COLUMBIA,MO,"
+ Details
+"
+LEBEL,AUSTIN,CLAY, ,M,W,24,COLUMBIA,MO,"
+ Details
+"
+LEE,DOUGLAS,ANTONIO, ,M,B,41,COLUMBIA,MO,"
+ Details
+"
+LEWIS,CURTIS,ALLEN, ,M,B,36,COLUMBIA,MO,"
+ Details
+"
+LEWIS,MICHAEL,TODD, ,M,W,40,JEFFERSON CITY,MO,"
+ Details
+"
+LINZIE,EDDIE,BRUCE, ,M,B,43,COLUMBIA,MO,"
+ Details
+"
+LINZIE,JOHN,MICHAEL, ,M,U,41,COLUMBIA,MO,"
+ Details
+"
+LONG,STEVEN,DANIEL, ,M,W,41,COLUMBIA,MO,"
+ Details
+"
+MARSHALL,TAMMY,MICHELLE, ,F,W,44,COLUMBIA,MO,"
+ Details
+"
+MATTHEWS,JERRY,RANDOLPH,JR,M,B,33,SANDIAGO,CA,"
+ Details
+"
+MCGEE,ZACHERY,LEE, ,M,W,27,COLUMBIA,MO,"
+ Details
+"
+MCKEE,COLBY,ROBERT, ,M,W,29,COLUMBIA,MO,"
+ Details
+"
+MCMULLEN,TRAVIS,UNDRA, ,M,B,34,COLUMBIA,MO,"
+ Details
+"
+MCQUITTY,SHAYANA,TRENAE, ,F,B,23,COLUMBIA,MO,"
+ Details
+"
+MILES,JULIE,LOUISE, ,F,W,39,COLUMBIA,MO,"
+ Details
+"
+MULLINS,DERRIK,SHAD, ,M,W,28,BOONVILLE,MO,"
+ Details
+"
+MUNDZ,JORGE, ,JR,M,W,26,COLUMBIA,MO,"
+ Details
+"
+MURRY,FLOYD,CHRISTIAN, ,M,W,19,CENTRALIA,MO,"
+ Details
+"
+NELSON,DYLAN,KANE, ,M,W,20,COLUMBIA,MO,"
+ Details
+"
+NESBITT,LARON,CHRISTOPHER, ,M,B,25,CALUMET CITY,IL,"
+ Details
+"
+NICKLE,BRYAN,CHRISTOPHER, ,M,W,43,COLUMBIA,MO,"
+ Details
+"
+NTAKARAHERA,JOSEPH, , ,M,B,19,COLUMBIA,MO,"
+ Details
+"
+OLAUGHLIN,JEFFERY,BOYD, ,M,W,58,ASHLAND,MO,"
+ Details
+"
+OSBORNE,GARY,DEAN, ,M,W,73,COLUMBIA,MO,"
+ Details
+"
+OSBY,LEWIS,WARREN, ,M,B,54,INDEPENCENCE,MO,"
+ Details
+"
+PARKER,STEVEN,ANTHONY, ,M,B,26,COLUMBIA,MO,"
+ Details
+"
+PAULS,MATTHEW,CURTIS, ,M,W,36,COLUMBIA,MO,"
+ Details
+"
+PEARL,JESSIE,JAMES, ,M,W,42,COLUMBIA,MO,"
+ Details
+"
+PEASE,DAVID,ANTHONY, ,M,W,34,COLUMBIA,MO,"
+ Details
+"
+PENNER,DOUGLAS,JOE,II,M,W,50,COLUMBIA,MO,"
+ Details
+"
+PERRIGO,DEREK,TODD, ,M,W,39,COLUMBIA,MO,"
+ Details
+"
+POELKER,ANDREW,JOHN, ,M,W,31,COLUMBIA,MO,"
+ Details
+"
+PRESIDENT,MUSTAFA,ALI, ,M,B,40,COLUMBIA,MO,"
+ Details
+"
+PRUITT,DAROLD,DEWAYNE, ,M,B,48,COLUMBIA,MO,"
+ Details
+"
+PUNCH,STEVEN,PAUL, ,M,W,39,COLUMBIA,MO,"
+ Details
+"
+REDDEN,LAJAVION,ANDREAS, ,M,B,20,ASHLAND,MO,"
+ Details
+"
+REYNOLDS,SETH,DELOS, ,M,W,43,COLUMBIA,MO,"
+ Details
+"
+ROBINSON,JAY,PAUL, ,M,W,44,BLUE SPRINGS,MO,"
+ Details
+"
+ROBINSON,SAMANTHA,JO, ,F,W,32,SAINT LOUIS,MO,"
+ Details
+"
+ROLLEY,XAVIER,CORDELL, ,M,B,23,COLUMBIA,MO,"
+ Details
+"
+ROTHMAN,TRENTEN,ADAM, ,M,W,19,COLUMBIA,MO,"
+ Details
+"
+ROWELL,ANTHONY,TODD, ,M,W,50,HOLTSUMMIT,MO,"
+ Details
+"
+RUBIO,MICHAEL,EULALIO, ,M,I,40,COLUMBIA,MO,"
+ Details
+"
+SAPP,TROY,ODONNALD, ,M,W,52,COLUMBIA,MO,"
+ Details
+"
+SCHATTE,JOHN,STEVEN LUCKY, ,M,W,23,COLUMBIA,MO,"
+ Details
+"
+SHAW,DEMETRIS,LAMAR, ,M,B,19,COLUMBIA,MO,"
+ Details
+"
+SHAW,RANDALL,GENE, ,M,W,44,COLUMBIA,MO,"
+ Details
+"
+SHAW,ROBERT,DEYONE, ,M,B,48,CHICAGO,IL,"
+ Details
+"
+SHELTON,JUSTIN,TERRELL, ,M,B,25,COLUMBIA,MO,"
+ Details
+"
+SHOUNE,SAID,JIMA, ,M,B,30,COLUMBIA,MO,"
+ Details
+"
+SHUMPERT,JULIAN,JAFAR, ,M,B,19,COLUMBIA,MO,"
+ Details
+"
+SMITH,CORTAVIA,EMON, ,M,B,22,COLUMBIA,MO,"
+ Details
+"
+SMITH,DAMIAN, , ,M,B,28,COLUMBIA,MO,"
+ Details
+"
+SMITH,DERRICK,DESHUN, ,M,B,32,COLUMBIA,MO,"
+ Details
+"
+SPENCER,KENNETH,JOE,JR,M,W,39,FULTON,MO,"
+ Details
+"
+STAPLETON,MICHEAL,CORTEZ, ,M,B,35,COLUMBIA,MO,"
+ Details
+"
+STAVRON,JEFFREY,MICHAEL, ,M,W,41,COLUMBIA,MO,"
+ Details
+"
+STECK,KASSINA,PATRICE, ,F,W,35,COLUMBIA,MO,"
+ Details
+"
+STEELE,MICHAEL,EUGENE, ,M,W,31,COLUMBIA,MO,"
+ Details
+"
+STOKES,WILLIS,DANIEL,III,M,W,59,COLUMBIA,MO,"
+ Details
+"
+STRONG,KEVIN,JABARI, ,M,B,25, , ,"
+ Details
+"
+SWANSON,MARK,ANTHONY, ,M,B,25,EAST ST LOUIS,MO,"
+ Details
+"
+TAYLOR,ALI,LANE, ,F,W,19,BOONVILLE,MO,"
+ Details
+"
+TEMPLETON,WILLIAM,CURBY,JR,M,W,31,FULTON,MO,"
+ Details
+"
+TENNEY,DALE,DOUGLAS, ,M,W,41,COLUMBIA,MO,"
+ Details
+"
+THOMAS,DERAIL,JEMAL, ,M,B,28,COLUMBIA,MO,"
+ Details
+"
+TROYER,RYAN,LEWIS, ,M,W,36,JEFFERSON CITY,MO,"
+ Details
+"
+TUCKER,MATYIA,LACOLE, ,F,B,24,COLUMBIA,MO,"
+ Details
+"
+TUMULTY,JOSEPH,KEISHO, ,M,W,33,COLUMBIA,MO,"
+ Details
+"
+TURNER,AUSTIN,CREG, ,M,W,23,MOBERLY,MO,"
+ Details
+"
+VANWART,GEORGE,JONATHAN, ,M,W,37,COLUMBIA,MO,"
+ Details
+"
+VAUGHN,BOBBY,GLENN, ,M,W,59,FULTON,MO,"
+ Details
+"
+VAZQUEZ-REZA,PASCUAL, , ,M,U,30,COLUMBIA,MO,"
+ Details
+"
+WADKINS,SAMAHIR, , ,F,W,42,BAKERSFIELD,MO,"
+ Details
+"
+WALTON,LACRETIA,LASHAY, ,F,B,39,COLUMBIA,MO,"
+ Details
+"
+WARREN,DON,LAMONT, ,M,B,45,COLUMBIA,MO,"
+ Details
+"
+WELLS,BLYTHE,JANE, ,F,W,33,COLUMBIA,MO,"
+ Details
+"
+WHITE,CAMERON,JOVON, ,M,B,19,COLUMBIA,MO,"
+ Details
+"
+WHITE,ISAAC,KESHON, ,M,B,26,COLUMBIA,MO,"
+ Details
+"
+WHITESIDE,RONNIE,LEE, ,M,W,42,COLUMBIA,MO,"
+ Details
+"
+WHITLEY,MICHAEL,ISAIAH, ,M,B,31,COLUMBIA,MO,"
+ Details
+"
+WHITWORTH,BRENDAN,GALE, ,M,W,31,COLUMBIA,MO,"
+ Details
+"
+WILDER,DEANTE,ANTONIO, ,M,B,19,JEFFERSON CITY,MO,"
+ Details
+"
+WILLIAMS,FREDRICK,JAROD, ,M,B,34,COLUMBIA,MO,"
+ Details
+"
+WILLIAMS,HENRY,ANTHONY,JR,M,B,30,COLUMBIA,MO,"
+ Details
+"
+WILLIAMS,OMAR,LYNSHUN, ,M,B,47,COLUMBIA,MO,"
+ Details
+"
+WILLIAMS,RAYMOND,CHARLES, ,M,B,33,JEFFERSON CITY,MO,"
+ Details
+"
+WILLIAMS,SYLVESTER,EARL,JR,M,B,24,COLUMBIA,MO,"
+ Details
+"
+WILLIAMS,ZECHARIAH,DAVON, ,M,B,24,COLUMBIA,MO,"
+ Details
+"
+WILSON,KNOWLEDGE,DEANTHONY, ,M,B,18,COLUMBIA,MO,"
+ Details
+"
+WINANS,STEPHEN,DANIEL, ,M,W,33,CARTHAGE,MO,"
+ Details
+"
+WINTERS,JAMES,DEWAYNE, ,M,B,47,COLUMBIA,MO,"
+ Details
+"
+WRIGHT,THOMAS,TURNER, ,M,W,57,HARRISBURG,MO,"
+ Details
+"
+WYNN,CHRISTIAN,JASON, ,M,W,50,ASHLAND,MO,"
+ Details
+"
+YORK,HEATHER,CHRISTINE, ,F,W,38,COLUMBIA,MO,"
+ Details
+"
+YOUNG,SCOTT,ALAN, ,M,W,33,FAYETTE,MO,"
+ Details
+"
+
