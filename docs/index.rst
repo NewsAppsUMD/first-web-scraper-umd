@@ -13,14 +13,14 @@ Kazil <jackiekazil@gmail.com>`__, `Sisi Wei <me@sisiwei.com>`__ and Matt
 Wynn for bootcamps held by Investigative Reporters and Editors at the
 University of Missouri in Columbia, Missouri in 2013 and 2014.
 
-It was modified by `Ben Welsh <http://palewi.re/who-is-ben-welsh/>`_ in December 2014 for workshops at `The Centre for Cultura Contemporania de Barcelona <http://www.cccb.org/en/curs_o_conferencia-data_journalism_work_session_viii-46957>`_, `Medialab-Prado <http://medialab-prado.es/article/iitallerdeperiodismodedatosconvocatoriadeproyectos>`_ and the `Escuela de Periodismo y Comunicación <http://www.escuelaunidadeditorial.es/master-periodismo-de-investigacion.html>`_ at Universidad Rey Juan Carlos.
+It was modified by `Ben Welsh <https://palewi.re/who-is-ben-welsh/>`_ in December 2014 for workshops at `The Centre for Cultura Contemporania de Barcelona <http://www.cccb.org/en/curs_o_conferencia-data_journalism_work_session_viii-46957>`_, `Medialab-Prado <http://medialab-prado.es/article/iitallerdeperiodismodedatosconvocatoriadeproyectos>`_ and the `Escuela de Periodismo y Comunicación <http://www.escuelaunidadeditorial.es/master-periodismo-de-investigacion.html>`_ at Universidad Rey Juan Carlos and further modified by `Derek Willis <http://thescoop.org/about/>`_ in January 2022 for a class at the `Philip Merrill College of Journalism <https://merrill.umd.edu/>`_ at the University of Maryland.
 
 -  Code repository:
-   `github.com/ireapps/first-web-scraper/ <https://github.com/ireapps/first-web-scraper/>`__
+   `https://github.com/dwillis/first-web-scraper-umd <https://github.com/dwillis/first-web-scraper-umd/>`__
 -  Documentation:
    `first-web-scraper.rtfd.org/ <http://first-web-scraper.rtfd.org/>`__
 -  Issues:
-   `github.com/ireapps/first-web-scraper/issues/ <https://github.com/ireapps/first-web-scraper/issues>`__
+   `https://github.com/dwillis/first-web-scraper-umd/issues/ <https://github.com/dwillis/first-web-scraper-umd/issues>`__
 
 What you will make
 ------------------
@@ -33,16 +33,11 @@ Prelude: Prerequisites
 Before you can begin, your computer needs the following tools installed
 and working to participate.
 
-1. A `command-line
-   interface <https://en.wikipedia.org/wiki/Command-line_interface>`__
-   to interact with your computer
-2. A `text editor <https://en.wikipedia.org/wiki/Text_editor>`__ to work
-   with plain text files
-3. Version 2.7 of the
-   `Python <http://python.org/download/releases/2.7.6/>`__ programming
-   language
-4. The `pip <https://pip.pypa.io/en/latest/installing.html>`__
-   package manager for Python
+1. A `command-line interface <https://en.wikipedia.org/wiki/Command-line_interface>`_ to interact with your computer
+2. A `text editor <https://en.wikipedia.org/wiki/Text_editor>`_ to work with plain text files
+3. Version 3.X of the `Python <https://www.python.org/downloads/>`_ programming language
+4. The `pipenv <https://pipenv.pypa.io/en/latest/>`_ package and virtual environment manager for Python
+5. `Git <http://git-scm.com/>`_ version control software and an account at `GitHub.com <http://www.github.com>`_
 
 .. note::
 
@@ -56,95 +51,183 @@ and working to participate.
 Command-line interface
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Unless something is wrong with your computer, there should be a way to
-open a window that lets you type in commands. Different operating
-systems give this tool slightly different names, but they all have some
-form of it, and there are alternative programs you can install as well.
+Unless something is wrong with your computer, there should be a way to open a window that lets you type in commands. Different operating systems give this tool slightly different names, but they all have some form of it.
 
-On Windows you can find the command-line interface by opening the
-"command prompt." Here are instructions for `Windows
-8 <http://windows.microsoft.com/en-us/windows/command-prompt-faq#1TC=windows-8>`__
-and `earlier
-versions <http://windows.microsoft.com/en-us/windows-vista/open-a-command-prompt-window>`__. On Apple computers, you open the `"Terminal"
-application <http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line>`__. Ubuntu Linux comes with a program of the `same
-name <http://askubuntu.com/questions/38162/what-is-a-terminal-and-how-do-i-open-and-use-it>`__.
+On Windows you can find the command-line interface by opening the "command prompt." Here are `instructions <https://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/>`_.
+
+On Apple computers, you open the `"Terminal" application <https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line>`_.
+
+Ubuntu Linux comes with a program of the `same name <https://askubuntu.com/questions/38162/what-is-a-terminal-and-how-do-i-open-and-use-it>`_.
 
 Text editor
-~~~~~~~~~~~
+-----------
 
-A program like Microsoft Word, which can do all sorts of text formatting
-like change the size and color of words, is not what you need. Do not
-try to use it below.
+A program like Microsoft Word, which can do all sorts of text formatting like
+change the size and color of words, is not what you need. Do not try to use it.
 
-You need a program that works with simple `"plain text"
-files <https://en.wikipedia.org/wiki/Text_file>`__, and is therefore
-capable of editing documents containing Python code, HTML markup and
-other languages without dressing them up by adding anything extra. Such
-programs are easy to find and some of the best ones are free, including
-those below.
+You need a program that works with simple `"plain text" files <https://en.wikipedia.org/wiki/Text_file>`_,
+and is therefore capable of editing documents containing Python code, HTML markup and other languages without
+dressing them up by adding anything extra. Such programs are easy to find and some of the best ones are free, including those below.
 
-For Windows, I recommend installing
-`Notepad++ <http://notepad-plus-plus.org/>`__. For Apple computers, try
-`TextWrangler <http://www.barebones.com/products/textwrangler/download.html>`__.
-In Ubuntu Linux you can stick with the pre-installed
-`gedit <https://help.ubuntu.com/community/gedit>`__ text editor.
+For Windows, I recommend installing `Notepad++ <https://notepad-plus-plus.org/>`_.
+
+For Apple computers, try `Sublime Text <https://www.sublimetext.com/>`_ or `Atom <https://atom.io/>`_.
+
+In Ubuntu Linux you can stick with the pre-installed `gedit <https://help.ubuntu.com/community/gedit>`_ text editor.
 
 Python
 ~~~~~~
 
-If you are using Mac OSX or a common flavor of Linux, Python is probably
-already installed and you can test to see what version, if any, is there
-waiting for you by typing the following into your terminal.
+Python is a computer programming language, like many others you may have heard of such as Ruby or PHP or Java. It is free and open source. We'll be installing Python 3 in a virtual environment, so it doesn't matter what version you have installed currently.
 
-.. code:: bash
+For Mac
+^^^^^^^
 
-    $ python -V
+If you are using Mac OSX, Python version 2.7 is probably already installed, but we'll be using Python 3. To install that, we'll be using `Homebrew <https://docs.python-guide.org/starting/install3/osx/#install3-osx>`_.
+
+To install Python via Homebrew, you can run the following code:
+
+.. code-block:: bash
+
+    $ brew install python
 
 .. note::
 
-    You don't have to type the "$" It's just a generic symbol
-    geeks use to show they're working on the command line.
+    You'll note that the example above begins with a "$". You do not need to type this. It is only a generic symbol
+    commonly used by geeks to indicate a piece of code should be run from the command line. On Windows, this prompt could even look quite different, likely starting with a phrase like ``C:\``.
 
-If you don't have Python installed (a more likely fate for Windows
-users) try downloading and installing it from
-`here <http://www.python.org/download/releases/2.7.6/>`__.
+You should see something like this after you hit enter:
 
-In Windows, it's also crucial to make sure that the Python program is
-available on your system's ``PATH`` so it can be called from anywhere on
-the command line. `This
-screencast <http://showmedo.com/videotutorials/video?name=960000&fromSeriesID=96>`__
-can guide you through that process.
+.. code-block:: bash
 
-Python 2.7 is preferred but you can probably find a way to make most of
-this tutorial work with other versions if you futz a little.
+    $ python -V
+    Python 3.9.7
 
-.. _command-line-pip:
 
-pip
-~~~
+For Windows
+^^^^^^^^^^^
 
-The `pip package
-manager <https://pip.pypa.io/en/latest/>`__ makes it
-easy to install open-source libraries that expand what you're able to do
-with Python. Later, we will use it to install everything needed to
-create a working web application.
+Windows people should follow the instructions `here <https://docs.python-guide.org/starting/install3/win/#install3-windows>`_.
 
-If you don't have it already, you can get pip by following `these
-instructions <https://pip.pypa.io/en/latest/installing.html>`__.
-In Windows, it's necessary to make sure that the Python ``Scripts``
-directory is available on your system's ``PATH`` so it can be called
-from anywhere on the command line. `This
-screencast <http://showmedo.com/videotutorials/video?name=960000&fromSeriesID=96>`__
-can help.
+.. _command-line-pipenv:
 
-Verify pip is installed with the following.
+pipenv
+~~~~~~~~~~~~~~~~~~
 
-.. code:: bash
+The `pipenv package manager <https://pipenv.pypa.io/>`_ makes it easy to install open-source libraries that expand what you're able to do with Python. Later, we will use it to install everything needed to create a working web application.
 
-    $ pip -V
+Verify pipenv is installed with the following command:
 
-Act 1: The command line
------------------------
+.. code-block:: bash
+
+    $ pipenv -v
+
+If you get and error, that means you don't have pipenv installed. You can get it by following `these instructions <https://pipenv.pypa.io/en/latest/install/#pragmatic-installation-of-pipenv>`_.
+
+Git and GitHub
+--------------
+
+`Git <http://git-scm.com/>`_ is a version control program for saving the changes you make to files over time. This is useful when you're working on your own, but quickly becomes essential with large software projects when you work with other developers.
+
+`GitHub <https://github.com/>`_ is a website that hosts git code repositories, both public and private. It comes with many helpful tools for reviewing code and managing projects. It also has some `extra tricks <http://pages.github.com/>`_ that make it easy to publish web pages, which we will use later.
+
+GitHub offers helpful guides for installing Git for `Windows <https://help.github.com/articles/set-up-git#platform-windows>`_, `Macs <https://help.github.com/articles/set-up-git#platform-mac>`_ and `Linux <https://help.github.com/articles/set-up-git#platform-linux>`_.
+
+You can verify it's installed from your command line like so:
+
+.. code-block:: bash
+
+    $ git --version
+
+Once that's done, you should create an account at GitHub, if you don't already have one. `The free plan <https://github.com/pricing>`_ is all that's required to complete this lesson.
+
+.. _activate:
+
+****************
+Act 1: Hello Git
+****************
+
+Start at our first-web-scraper directory.
+
+.. code-block:: bash
+
+    $ cd first-web-scraper
+
+Create a new development environment with pipenv, specifying the version of python:
+
+.. code-block:: bash
+
+    # You don't have to type the "$" It's just a generic symbol
+    # geeks use to show they're working on the command line.
+    $ pipenv --python=python3
+
+Then activate it (it's like turning on the power):
+
+.. code-block:: bash
+
+    $ pipenv shell
+
+Create a new Git repository.
+
+.. code-block:: bash
+
+    $ git init repo
+
+Visit `GitHub <http://www.github.com>`_ and create a new public repository named ``first-web-scraper``. Don't check "Initialize with README." You want to start with a blank repository.
+
+Then connect your local directory to GitHub with the following command.
+
+.. code-block:: bash
+
+    $ git remote add origin https://github.com/<yourusername>/first-web-scraper.git
+
+Create your first file, a blank ``README`` with a `Markdown <https://en.wikipedia.org/wiki/Markdown>`_ file extension since that's `the preferred format of GitHub <https://help.github.com/articles/github-flavored-markdown>`_.
+
+.. code-block:: bash
+
+    # Macs or Linux:
+    $ touch README.md
+    # In Windows fire it up in your text editor right away:
+    $ start notepad++ README.md
+
+Open up the README in your text editor and type something in it. Maybe something like:
+
+.. code-block:: markdown
+
+    My first web scraper
+    ====================
+
+Make sure to save it. Then officially add the file to your repository for tracking with Git's ``add`` command.
+
+.. code-block:: bash
+
+    $ git add README.md
+
+Log its creation with Git's ``commit`` command. You can include a personalized message after the ``-m`` flag.
+
+.. code-block:: bash
+
+    $ git commit -m "First commit"
+
+If this is your first time using Git, you may be prompted to configure you name and email.
+If so, take the time now. Then run the ``commit`` command above again.
+
+.. code-block:: bash
+
+    $ git config --global user.email "your@email.com"
+    $ git config --global user.name "your name"
+
+Now, finally, push your commit up to GitHub.
+
+.. code-block:: bash
+
+    $ git push origin main
+
+Reload your repository on GitHub and see your handiwork.
+
+***********************
+Act 2: The command line
+***********************
 
 Working with Python (and pretty much any other programming language)
 means becoming comfortable with your computer's command line
@@ -315,9 +398,7 @@ A Python file is nothing more than a text file that has the extension ".py" at t
 
 That's it. And it works for both OSX and Windows.
 
-Python also comes with a very neat feature called an **interactive
-interpreter**, which allows you to execute Python code one line at a
-time, sort of like working from the command line.
+Python also comes with a very neat feature called an **interactive interpreter**, which allows you to execute Python code one line at a time, sort of like working from the command line.
 
 We'll be using this a lot in the beginning to demonstrate concepts, but in the real world it's often useful for testing and debugging.
 
@@ -366,7 +447,7 @@ the terminal because that value is stored in the variable.
 
 .. code:: python
 
-    >>> print greeting
+    >>> print(greeting)
     Hello world!
 
 Data types
@@ -515,7 +596,7 @@ Let's start with a simple example.
 
     >>> number = 10
     >>> if number > 5:
-    >>>    print "Wow, that's a big number!"
+    >>>    print("Wow, that's a big number!")
     >>>
     Wow, that's a big number!
 
@@ -526,7 +607,7 @@ Our little program in this case starts with a variable, which we've called ``num
 
     >>> number = 10
     >>> if number > 5:
-    >>>    print "Wow, that's a big number!"
+    >>>    print("Wow, that's a big number!")
 
 The next line, ``if number > 5:`` declares our ``if`` statement. In this case, we want something to happen if the ``number`` variable is greater than 5.
 
@@ -535,7 +616,7 @@ The next line, ``if number > 5:`` declares our ``if`` statement. In this case, w
 
     >>> number = 10
     >>> if number > 5:
-    >>>    print "Wow, that's a big number!"
+    >>>    print("Wow, that's a big number!")
 
 Most of the if statements we build are going to rely on equality operators like the kind we learned in elementary school: greater than (>), less than (<), greater than or equal to (>=), less than or equal to (<=) and plain old "equals". The equals operator is a little tricky, in that it is declared with two equals signs (==), not one (=). Why is that? Because you'll remember from above that a single equals sign is the notation we use to assign a value to a variable!
 
@@ -546,7 +627,7 @@ Next, take note of the indentation. In Python, whitespace matters. A lot.  Notic
 
     >>> number = 10
     >>> if number > 5:
-    >>>    print "Wow, that's a big number!"
+    >>>    print("Wow, that's a big number!")
 
 Tabs and spaces are different. To avoid problems, you should press the space bar four times whenever you indent Python code.
 
@@ -561,9 +642,9 @@ If you look closely, there's another small detail you need to remember: The colo
 
     >>> number = 10
     >>> if number > 5:
-    >>>     print "Wow, that's a big number!"
+    >>>     print("Wow, that's a big number!")
     >>>
-    >>> print "I execute no matter what your number is!"
+    >>> print("I execute no matter what your number is!")
 
 It helps sometimes to think of your program as taking place on different levels.
 
@@ -578,9 +659,9 @@ If we wanted to continue our program back on the first level, we could do someth
 
     >>> number = 10
     >>> if number > 5:
-    >>>     print "Wow, that's a big number!"
+    >>>     print("Wow, that's a big number!")
     >>>
-    >>> print "I execute no matter what your number is!"
+    >>> print("I execute no matter what your number is!")
     >>>
     Wow, that's a big number!
     I execute no matter what your number is!
@@ -599,9 +680,9 @@ You don't need to have an ``else`` condition for your ``if`` statements, but som
 
     number = 10
     if number > 5:
-        print "Wow, that's a big number!"
+        print("Wow, that's a big number!")
     else:
-        print "Gee, that number's kind of small, don't you think?"
+        print("Gee, that number's kind of small, don't you think?")
 
 In this case, we're telling our program to print one thing if ``number`` is greater than five, and something else if it's not. Notice that the ``else`` statement also ends with a colon, and as such its contents are also indented four spaces.
 
@@ -619,7 +700,7 @@ That's where for loops come in. Let's start by having Python say the ABC's:
 
     >>> list_of_letters = ['a', 'b', 'c']
     >>> for letter in list_of_letters:
-    >>>     print letter
+    >>>     print(letter)
     >>>
     a
     b
@@ -640,7 +721,7 @@ Second, turn your attention to the syntax of declaring the loop itself.
 
     >>> list_of_letters = ['a', 'b', 'c']
     >>> for letter in list_of_letters:
-    >>>     print letter
+    >>>     print(letter)
 
 All of our for loops start, unsurprisingly, with the word ``for`` and
 follow the pattern ``for variable_name in list:``. The ``variable_name``
@@ -655,7 +736,7 @@ In this case we chose ``letter``, but you could just as easily call it ``donkey`
 
     >>> list_of_letters = ['a', 'b', 'c']
     >>> for donkey in list_of_letters:
-    >>>     print donkey
+    >>>     print(donkey)
 
 The next thing you have to specify is the list you want to loop over, in
 this case ``list_of_letters``. The line ends with a colon, and the next
@@ -722,7 +803,7 @@ Functions don't necessarily need arguments, nor do they always need to return a 
 .. code-block:: python
 
     def say_hello():
-        print "Hello!"
+        print("Hello!")
 
 But the idea of arguments and ``return`` values are still fundamental in
 understanding functions, and they will come up more often than not.
@@ -737,20 +818,20 @@ Some of these are built into a toolbox that comes with the language, known as th
 There are two ways to import these tools into your scripts.
 
 To pull in an entire toolkit, use the ``import`` command. In this case,
-we'll get the ``urllib2`` package, which allows us to visit websites
+we'll get the ``urllib`` package, which allows us to visit websites
 with Python:
 
 .. code-block:: python
 
-    >>> import urllib2
-    >>> urllib2.urlopen("http://www.python.org/")
+    >>> import urllib.request
+    >>> urllib.request.urlopen("https://www.python.org/")
 
 You can also import specific tools from inside a toolkit by working in the ``from`` command with something like this:
 
 .. code-block :: python
 
-    >>> from urllib2 import urlopen
-    >>> urlopen("http://www.python.org/")
+    >>> from urllib import request
+    >>> request.urlopen("https://www.python.org/")
 
 In practice, you'll use both of these methods.
 
@@ -758,35 +839,29 @@ In practice, you'll use both of these methods.
 
   There's no rule but most Python programmers try to keep things manageable by lining up all ``import`` statements at the top of each script.
 
+*******************
 Act 3: Web scraping
--------------------
+*******************
 
 Now that we've covered all the fundamentals, it's time to get to work and write a web scraper.
 
-The target is a regularly updated `roster of inmates at the Boone County Jail in Missouri <https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s>`_. Boone County is home to Columbia, where you can find the University of Missouri's main campus and the headquarters of Investigative Reporters and Editors.
+The target is a regularly updated `list of reports from Maryland's Office of Legislative Audits <https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo=>`_. These include audits of state and local government agencies as well as presentations to the state Legislature.
 
 Installing dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The scraper will use Python's `BeautifulSoup <http://www.crummy.com/software/BeautifulSoup/>`_ toolkit to parse the site's HTML and extract the data.
+The scraper will use Python's `BeautifulSoup <https://www.crummy.com/software/BeautifulSoup/>`_ toolkit to parse the site's HTML and extract the data.
 
-We'll also use the `Requests library <http://docs.python-requests.org/en/latest/>`_ to open the URL, download the HTML and pass it to BeautifulSoup.
+We'll also use the `Requests library <https://docs.python-requests.org/en/latest/>`_ to open the URL, download the HTML and pass it to BeautifulSoup.
 
-Since they are not included in Python's standard library, we'll first need to install them using ``pip``, a command-line tool that can grab open-source libraries off the web. If you don't have it installed, you'll need to follow the prequisite instructions for :ref:`command-line-pip`.
+Since they are not included in Python's standard library, we'll first need to install them using ``pipenv``, a command-line tool that can grab open-source libraries off the web. If you don't have it installed, you'll need to follow the prequisite instructions for :ref:`command-line-pip`.
 
-In OSX or Linux try this:
-
-.. code:: bash
-
-    $ sudo pip install BeautifulSoup
-    $ sudo pip install Requests
-
-On Windows give it a shot without the ``sudo``.
+In Windows, OSX or Linux try this:
 
 .. code:: bash
 
-    $ pip install BeautifulSoup
-    $ pip install Requests
+    $ pipenv install beautifulsoup4
+    $ pipenv install requests
 
 Analyzing the HTML
 ~~~~~~~~~~~~~~~~~~
@@ -831,11 +906,11 @@ At this stage, your job is to find a pattern or identifier in the code for the e
 In the best cases, you can extract content by using the ``id`` or ``class`` already assigned to the element you'd like to extract. An 'id' is intended to act as the unique identifer a specific item on a page. A 'class' is used to label a
 specific type of item on a page. So, there maybe may instances of a class on a page.
 
-On Boone County's page, there is only table in the HTML's ``body`` tag. The table is identified by a class.
+On the Office of Legislative Audits page, there is only one table in the HTML's ``body`` tag. The table is identified by an id.
 
 .. code:: html
 
-    <table class="resultsTable" style="margin: 0 auto; width: 90%; font-size: small;">
+    <table id="searchResultsTable" class="display wrapped">
 
 Extracting an HTML table
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -858,10 +933,10 @@ Then open your text editor and save an empty file into the directory name ``scra
 
     import requests
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
-    print html
+    print(html)
 
 Save the file and run this script from your command line and you should see the entire HTML of the page spilled out.
 
@@ -875,14 +950,14 @@ Next import the ``BeautifulSoup`` HTML parsing library and feed it the page.
     :emphasize-lines: 2,8-9
 
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
     soup = BeautifulSoup(html)
-    print soup.prettify()
+    print(soup.prettify())
 
 Save the file and run the script again and you should see the page's HTML again, but in a prettier format this time. That's a hint at the magic happening inside BeautifulSoup once it gets its hands on the page.
 
@@ -896,15 +971,15 @@ Next we take all the detective work we did with the page's HTML above and conver
     :emphasize-lines: 9-10
 
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
     soup = BeautifulSoup(html)
-    table = soup.find('tbody', attrs={'class': 'stripe'})
-    print table.prettify()
+    table = soup.find('tbody')
+    print(table.prettify())
 
 Save the file and run ``scrape.py`` again. This time it only prints out the table we're after, which was selected by instructing BeautifulSoup to return only those ``<table>`` tags with ``resultsTable`` as their class attribute.
 
@@ -920,17 +995,17 @@ BeautifulSoup gets us going by allowing us to dig down into our table and return
     :emphasize-lines: 12,13
 
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
     soup = BeautifulSoup(html)
-    table = soup.find('tbody', attrs={'class': 'stripe'})
+    table = soup.find('tbody')
 
-    for row in table.findAll('tr'):
-        print row.prettify()
+    for row in table.find_all('tr'):
+        print(row.prettify())
 
 Save and run the script. You'll not see each row printed out separately as the script loops through the table.
 
@@ -944,18 +1019,18 @@ Next we can loop through each of the cells in each row by select them inside the
     :emphasize-lines: 12,13
 
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
     soup = BeautifulSoup(html)
-    table = soup.find('tbody', attrs={'class': 'stripe'})
+    table = soup.find('tbody')
 
-    for row in table.findAll('tr'):
-        for cell in row.findAll('td'):
-            print cell.text
+    for row in table.find_all('tr'):
+        for cell in row.find_all('td'):
+            print(cell.text)
 
 Again, save and run the script. (This might seem repetitive, but it is the constant rhythm of many Python programmers.)
 
@@ -963,54 +1038,29 @@ Again, save and run the script. (This might seem repetitive, but it is the const
 
   $ python scrape.py
 
-When that prints you will notice some annoying ``&nbsp;`` on the end of many lines. That is the HTML code for a **non-breaking space**, which forces the browser to render an empty space on the page. It is junk and we can delete it easily with this handy Python trick.
-
-.. code-block:: python
-    :emphasize-lines: 13
-
-    import requests
-    from BeautifulSoup import BeautifulSoup
-
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
-    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
-    html = response.content
-
-    soup = BeautifulSoup(html)
-    table = soup.find('tbody', attrs={'class': 'stripe'})
-
-    for row in table.findAll('tr'):
-        for cell in row.findAll('td'):
-            print cell.text.replace('&nbsp;', '')
-
-Save and run the script. Everything should be much better.
-
-.. code:: bash
-
-  $ python scrape.py
-
 Now that we have found the data we want to extract, we need to structure it in a way that can be written out to a comma-delimited text file. That won't be hard since CSVs aren't any more than a grid of columns and rows, much like a table.
 
-Let's start by adding each cell in a row to a new Python list.
+Let's start by adding each cell in a row to a new Python list, and we'll strip off any whitespace at the beginning or end of each cell.
 
 .. code-block:: python
     :emphasize-lines: 12,14-16
 
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
     soup = BeautifulSoup(html)
-    table = soup.find('tbody', attrs={'class': 'stripe'})
+    table = soup.find('tbody')
 
-    for row in table.findAll('tr'):
+    for row in table.find_all('tr'):
         list_of_cells = []
-        for cell in row.findAll('td'):
-            text = cell.text.replace('&nbsp;', '')
+        for cell in row.find_all('td'):
+            text = cell.text.strip()
             list_of_cells.append(text)
-        print list_of_cells
+        print(list_of_cells)
 
 Save and rerun the script. Now you should see Python lists streaming by one row at a time.
 
@@ -1024,24 +1074,24 @@ Those lists can now be lumped together into one big list of lists, which, when y
     :emphasize-lines: 11,17-19
 
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
     soup = BeautifulSoup(html)
-    table = soup.find('tbody', attrs={'class': 'stripe'})
+    table = soup.find('tbody')
 
     list_of_rows = []
-    for row in table.findAll('tr'):
+    for row in table.find_all('tr'):
         list_of_cells = []
-        for cell in row.findAll('td'):
-            text = cell.text.replace('&nbsp;', '')
+        for cell in row.find_all('td'):
+            text = cell.text.strip()
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    print list_of_rows
+    print(list_of_rows)
 
 Save and rerun the script. You should see a big bunch of data dumped out into the terminal. Look closely and you'll see the list of lists.
 
@@ -1049,31 +1099,62 @@ Save and rerun the script. You should see a big bunch of data dumped out into th
 
   $ python scrape.py
 
-To write that list out to a comma-delimited file, we need to import Python's built-in ``csv`` module at the top of the file. Then, at the botton, we will create a new file, hand it off to the ``csv`` module, and then lead on a handy tool it has called ``writerows`` to dump out our list of lists.
+We've got much of the information we want, but there's an important thing missing - the links to the various reports! Using `cell.text` just gives us the text inside an HTML tag, not any HTML it contains, including URLs. We can get those by checking to see if there is a link and, if so, grabbing the `href` tag. For convenience, we're going to just grab the first link in a cell.
 
 .. code-block:: python
-    :emphasize-lines: 1,20-22
+    :emphasize-lines: 15-16
 
-    import csv
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
     soup = BeautifulSoup(html)
-    table = soup.find('tbody', attrs={'class': 'stripe'})
+    table = soup.find('tbody')
 
     list_of_rows = []
-    for row in table.findAll('tr'):
+    for row in table.find_all('tr'):
         list_of_cells = []
-        for cell in row.findAll('td'):
-            text = cell.text.replace('&nbsp;', '')
+        for cell in row.find_all('td'):
+            if cell.find('a'):
+                list_of_cells.append(cell.find('a')['href'])
+            text = cell.text.strip()
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    outfile = open("./inmates.csv", "wb")
+    print(list_of_rows)
+
+Save and rerun the script.
+
+To write that list out to a comma-delimited file, we need to import Python's built-in ``csv`` module at the top of the file. Then, at the botton, we will create a new file, hand it off to the ``csv`` module, and then lead on a handy tool it has called ``writerows`` to dump out our list of lists.
+
+.. code-block:: python
+    :emphasize-lines: 1,22-24
+
+    import csv
+    import requests
+    from bs4 import BeautifulSoup
+
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+    html = response.content
+
+    soup = BeautifulSoup(html)
+    table = soup.find('tbody')
+
+    list_of_rows = []
+    for row in table.find_all('tr'):
+        list_of_cells = []
+        for cell in row.find_all('td'):
+            if cell.find('a'):
+                list_of_cells.append(cell.find('a')['href'])
+            text = cell.text.strip()
+            list_of_cells.append(text)
+        list_of_rows.append(list_of_cells)
+
+    outfile = open("./reports.csv", "w")
     writer = csv.writer(outfile)
     writer.writerows(list_of_rows)
 
@@ -1099,9 +1180,9 @@ But rather than bend over backwords to dig them out of the page, let's try somet
 
     import csv
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -1145,12 +1226,12 @@ Look at the HTML:
 
     <span>
     Page Size &nbsp;</span>
-    <input class="mrcinput" name="max_rows" size="3" title="max_rowsp" type="text" value="222" /> &nbsp; 
+    <input class="mrcinput" name="max_rows" size="3" title="max_rowsp" type="text" value="222" /> &nbsp;
 
 
 Here's where it shows you the words "Page Size" as well as an input section with a variable named ``max_rows`` and a value of 50.
 
-A handy technique: Sometimes web pages will accept input in the URL itself by passing a variable after a ``?``. Sometimes it works to play around with the URL and see how the site changes. 
+A handy technique: Sometimes web pages will accept input in the URL itself by passing a variable after a ``?``. Sometimes it works to play around with the URL and see how the site changes.
 
 In this case, instead of scraping the main URL:
 
@@ -1171,7 +1252,7 @@ To implement, just change your ``url`` variable like so:
 
     import csv
     import requests
-    from BeautifulSoup import BeautifulSoup
+    from bs4 import BeautifulSoup
 
     url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s?max_rows=500'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -1192,6 +1273,3 @@ To implement, just change your ``url`` variable like so:
     writer = csv.writer(outfile)
     writer.writerow(["Last", "First", "Middle", "Gender", "Race", "Age", "City", "State"])
     writer.writerows(list_of_rows)
-
-
-
