@@ -6,6 +6,11 @@ name = "pypi"
 [packages]
 beautifulsoup4 = "*"
 requests = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+python-coveralls = "*"
+pep8 = "*"
+pyflakes = "*"
 
 [dev-packages]
 
