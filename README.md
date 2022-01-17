@@ -2,7 +2,7 @@
 
 A step-by-step guide to writing a web scraper with Python.
 
-* Documentation: [first-web-scraper.rtfd.org](http://first-web-scraper.readthedocs.org/en/latest/)
+* Documentation: [first-web-scraper-umd.rtfd.org](https://first-web-scraper-umd.readthedocs.io/en/latest/)
 
 ### Contributing to the documentation
 
@@ -12,7 +12,7 @@ After installing the repository, the Sphinx documentation can be edited in the
 First install the requirements.
 
 ```bash
-$ pip install -r requirements-dev.txt
+$ pipenv install
 ```
 
 Fire up the test server, which will automatically update to show changes made
