@@ -956,7 +956,7 @@ Next import the ``BeautifulSoup`` HTML parsing library and feed it the page.
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     print(soup.prettify())
 
 Save the file and run the script again and you should see the page's HTML again, but in a prettier format this time. That's a hint at the magic happening inside BeautifulSoup once it gets its hands on the page.
@@ -977,7 +977,7 @@ Next we take all the detective work we did with the page's HTML above and conver
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody')
     print(table.prettify())
 
@@ -1001,7 +1001,7 @@ BeautifulSoup gets us going by allowing us to dig down into our table and return
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody')
 
     for row in table.find_all('tr'):
@@ -1025,7 +1025,7 @@ Next we can loop through each of the cells in each row by select them inside the
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody')
 
     for row in table.find_all('tr'):
@@ -1052,7 +1052,7 @@ Let's start by adding each cell in a row to a new Python list, and we'll strip o
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody')
 
     for row in table.find_all('tr'):
@@ -1080,7 +1080,7 @@ Those lists can now be lumped together into one big list of lists, which, when y
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody')
 
     list_of_rows = []
@@ -1111,7 +1111,7 @@ We've got much of the information we want, but there's an important thing missin
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody')
 
     list_of_rows = []
@@ -1141,7 +1141,7 @@ To write that list out to a comma-delimited file, we need to import Python's bui
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody')
 
     list_of_rows = []
@@ -1164,9 +1164,9 @@ Save and run the script. Nothing should happen -- at least to appear to happen.
 
   $ python scrape.py
 
-Since there are no longer any print statements in the file, the script is no longer dumping data out to your terminal. However, if you open up your code directory you should now see a new file named ``inmates.csv`` waiting for you. Open it in a text editor or Excel and you should see structured data all scraped out.
+Since there are no longer any print statements in the file, the script is no longer dumping data out to your terminal. However, if you open up your code directory you should now see a new file named ``reports.csv`` waiting for you. Open it in a text editor or Excel and you should see structured data all scraped out.
 
-There is still one obvious problem though. There are no headers!
+There are a couple of problems, though. First, there are no headers!
 
 .. figure:: _static/img/xls-1.png
     :width: 600px
@@ -1186,90 +1186,68 @@ But rather than bend over backwords to dig them out of the page, let's try somet
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody', attrs={'class': 'stripe'})
 
     list_of_rows = []
-    for row in table.findAll('tr'):
+    for row in table.find_all('tr'):
         list_of_cells = []
-        for cell in row.findAll('td'):
-            text = cell.text.replace('&nbsp;', '')
+        for cell in row.find_all('td'):
+            if cell.find('a'):
+                list_of_cells.append(cell.find('a')['href'])
+            text = cell.text.strip()
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    outfile = open("./inmates.csv", "wb")
+    outfile = open("./reports.csv", "w")
     writer = csv.writer(outfile)
-    writer.writerow(["Last", "First", "Middle", "Gender", "Race", "Age", "City", "State"])
+    writer.writerow(["date", "type", "url", "title"])
     writer.writerows(list_of_rows)
 
-Save and run the script one last time.
+Save and run the script once more.
 
 .. code:: bash
 
   $ python scrape.py
 
-Our headers are now there, and you've finished the class. Congratulations! You're now a web scraper.
-
-.. figure:: _static/img/xls-2.png
-    :width: 600px
-
-But that's not all: Getting the missing data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Since this scraper was first written, the sheriff's office changed how it displays inmates. You'll note it now only shows 50 rows at a time, and your scraper only downloads 50 rows at a time. This is a problem -- you want all of the information, not just 50 rows!
-
-But the sheriff's office offers a handy way to change how many rows are shown, with a default of 50.
-
-Look at the HTML:
-
-.. code-block:: html
-
-    <span>
-    Page Size &nbsp;</span>
-    <input class="mrcinput" name="max_rows" size="3" title="max_rowsp" type="text" value="222" /> &nbsp;
-
-
-Here's where it shows you the words "Page Size" as well as an input section with a variable named ``max_rows`` and a value of 50.
-
-A handy technique: Sometimes web pages will accept input in the URL itself by passing a variable after a ``?``. Sometimes it works to play around with the URL and see how the site changes.
-
-In this case, instead of scraping the main URL:
-
-.. code:: text
-
-    https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s
-
-Try scraping it by passing a new value for ``max_rows``:
-
-.. code:: text
-
-    https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s?max_rows=500
-
-To implement, just change your ``url`` variable like so:
+Our headers are now there, but there's still a problem here: the URLs are relative, not full ones. We can't just copy them into a browser or click on them. Let's fix that:
 
 .. code-block:: python
-    :emphasize-lines: 5
+    :emphasize-lines: 13,22
 
     import csv
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s?max_rows=500'
+    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     table = soup.find('tbody', attrs={'class': 'stripe'})
 
     list_of_rows = []
-    for row in table.findAll('tr'):
+    for row in table.find_all('tr'):
         list_of_cells = []
-        for cell in row.findAll('td'):
-            text = cell.text.replace('&nbsp;', '')
+        for cell in row.find_all('td'):
+            if cell.find('a'):
+                list_of_cells.append("https://www.ola.state.md.us" + cell.find('a')['href'])
+            text = cell.text.strip()
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    outfile = open("./inmates.csv", "wb")
+    outfile = open("./reports.csv", "w")
     writer = csv.writer(outfile)
-    writer.writerow(["Last", "First", "Middle", "Gender", "Race", "Age", "City", "State"])
+    writer.writerow(["date", "type", "url", "title"])
     writer.writerows(list_of_rows)
+
+Save and run the script once more.
+
+.. code:: bash
+
+  $ python scrape.py
+
+And you've finished the class. Congratulations! You're now a web scraper.
+
+.. figure:: _static/img/xls-2.png
+    :width: 600px
