@@ -25,7 +25,7 @@ It was modified by `Ben Welsh <https://palewi.re/who-is-ben-welsh/>`_ in Decembe
 What you will make
 ------------------
 
-This tutorial will guide you through the process of writing a Python script that can extract the roster of inmates at the Boone County Jail in Missouri from `a local government website <https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s>`_ and save it as comma-delimited text ready for analysis.
+This tutorial will guide you through the process of writing a Python script that can extract the list of state legislative audit reports from `a state government website <https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo=>`_ and save it as comma-delimited text ready for analysis.
 
 Prelude: Prerequisites
 ----------------------
@@ -860,7 +860,7 @@ In Windows, OSX or Linux try this:
 
 .. code:: bash
 
-    $ pipenv install beautifulsoup4
+    $ pipenv install bs4
     $ pipenv install requests
 
 Analyzing the HTML
@@ -880,7 +880,7 @@ By the time we're finished, we want to have extracted that data, now encrusted i
 
 In order to scrape a website, we need to understand how a typical webpage is put together.
 
-To view the HTML code that makesup this page () open up a browser and visit `out target <https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s>`_. Then right click with your mouse and select "View Source." You can do this for any page on the web.
+To view the HTML code that makesup this page () open up a browser and visit `our target <https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo=>`_. Then right click with your mouse and select "View Source." You can do this for any page on the web.
 
 .. figure:: _static/img/source.png
 
@@ -927,7 +927,7 @@ Let's start by creating a Python file to hold our scraper. First jump into the `
 
     You'll need to ``mkdir Code`` (or ``md Code`` in Windows) if you haven't made this directory yet.
 
-Then open your text editor and save an empty file into the directory name ``scrape.py`` and we're ready to begin. The first step is to import the requests library and download the Boone County webpage.
+Then open your text editor and save an empty file into the directory name ``scrape.py`` and we're ready to begin. The first step is to import the requests library and download the state webpage.
 
 .. code-block:: python
 
@@ -1171,7 +1171,7 @@ There are a couple of problems, though. First, there are no headers!
 .. figure:: _static/img/xls-1.png
     :width: 600px
 
-Here's why. If you go back and look closely, our script is only looping through lists of ``<td>`` tags found within each row. Fun fact: Header tags in HTML tables are often wrapped in the slightly different ``<th>`` tag. Look back at the source of the Boone County page and you'll see that's what exactly they do.
+Here's why. If you go back and look closely, our script is only looping through lists of ``<td>`` tags found within each row. Fun fact: Header tags in HTML tables are often wrapped in the slightly different ``<th>`` tag. Look back at the source of the state page and you'll see that's what exactly they do.
 
 But rather than bend over backwords to dig them out of the page, let's try something a little different. Let's just skip the first row when we loop though, and then write the headers out ourselves at the end.
 
