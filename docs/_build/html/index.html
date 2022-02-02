@@ -54,7 +54,7 @@ University of Missouri in Columbia, Missouri in 2013 and 2014.</p>
 </ul>
 <section id="what-you-will-make">
 <h2>What you will make<a class="headerlink" href="#what-you-will-make" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial will guide you through the process of writing a Python script that can extract the roster of inmates at the Boone County Jail in Missouri from <a class="reference external" href="https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s">a local government website</a> and save it as comma-delimited text ready for analysis.</p>
+<p>This tutorial will guide you through the process of writing a Python script that can extract the list of state legislative audit reports from <a class="reference external" href="https://www.ola.state.md.us/Search/Report?keyword=&amp;agencyId=&amp;dateFrom=&amp;dateTo=">a state government website</a> and save it as comma-delimited text ready for analysis.</p>
 </section>
 <section id="prelude-prerequisites">
 <h2>Prelude: Prerequisites<a class="headerlink" href="#prelude-prerequisites" title="Permalink to this headline">¶</a></h2>
@@ -650,7 +650,7 @@ with Python:</p>
 <p>We’ll also use the <a class="reference external" href="https://docs.python-requests.org/en/latest/">Requests library</a> to open the URL, download the HTML and pass it to BeautifulSoup.</p>
 <p>Since they are not included in Python’s standard library, we’ll first need to install them using <code class="docutils literal notranslate"><span class="pre">pipenv</span></code>, a command-line tool that can grab open-source libraries off the web. If you don’t have it installed, you’ll need to follow the prequisite instructions for <span class="xref std std-ref">command-line-pip</span>.</p>
 <p>In Windows, OSX or Linux try this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pipenv install beautifulsoup4
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pipenv install bs4
 $ pipenv install requests
 </pre></div>
 </div>
@@ -667,7 +667,7 @@ $ pipenv install requests
 <a class="reference internal image-reference" href="_images/xls-2.png"><img alt="_images/xls-2.png" src="_images/xls-2.png" style="width: 600px;" /></a>
 </figure>
 <p>In order to scrape a website, we need to understand how a typical webpage is put together.</p>
-<p>To view the HTML code that makesup this page () open up a browser and visit <a class="reference external" href="https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s">out target</a>. Then right click with your mouse and select “View Source.” You can do this for any page on the web.</p>
+<p>To view the HTML code that makesup this page () open up a browser and visit <a class="reference external" href="https://www.ola.state.md.us/Search/Report?keyword=&amp;agencyId=&amp;dateFrom=&amp;dateTo=">our target</a>. Then right click with your mouse and select “View Source.” You can do this for any page on the web.</p>
 <figure class="align-default">
 <img alt="_images/source.png" src="_images/source.png" />
 </figure>
@@ -703,7 +703,7 @@ specific type of item on a page. So, there maybe may instances of a class on a p
 <p class="admonition-title">Note</p>
 <p>You’ll need to <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">Code</span></code> (or <code class="docutils literal notranslate"><span class="pre">md</span> <span class="pre">Code</span></code> in Windows) if you haven’t made this directory yet.</p>
 </div>
-<p>Then open your text editor and save an empty file into the directory name <code class="docutils literal notranslate"><span class="pre">scrape.py</span></code> and we’re ready to begin. The first step is to import the requests library and download the Boone County webpage.</p>
+<p>Then open your text editor and save an empty file into the directory name <code class="docutils literal notranslate"><span class="pre">scrape.py</span></code> and we’re ready to begin. The first step is to import the requests library and download the state webpage.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.ola.state.md.us/Search/Report?keyword=&amp;agencyId=&amp;dateFrom=&amp;dateTo=&#39;</span>
@@ -900,7 +900,7 @@ specific type of item on a page. So, there maybe may instances of a class on a p
 <figure class="align-default">
 <a class="reference internal image-reference" href="_images/xls-1.png"><img alt="_images/xls-1.png" src="_images/xls-1.png" style="width: 600px;" /></a>
 </figure>
-<p>Here’s why. If you go back and look closely, our script is only looping through lists of <code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code> tags found within each row. Fun fact: Header tags in HTML tables are often wrapped in the slightly different <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code> tag. Look back at the source of the Boone County page and you’ll see that’s what exactly they do.</p>
+<p>Here’s why. If you go back and look closely, our script is only looping through lists of <code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code> tags found within each row. Fun fact: Header tags in HTML tables are often wrapped in the slightly different <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code> tag. Look back at the source of the state page and you’ll see that’s what exactly they do.</p>
 <p>But rather than bend over backwords to dig them out of the page, let’s try something a little different. Let’s just skip the first row when we loop though, and then write the headers out ourselves at the end.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">requests</span>
