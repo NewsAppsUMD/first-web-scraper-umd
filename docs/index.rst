@@ -55,7 +55,7 @@ Start at the `GitHub URL for this repository <https://github.com/dwillis/first-w
 
 Click the green "Use this template" button and choose "Open in a codespace". You should see something like this:
 
-.. image:: /_static/codespaces.png
+.. image:: /_static/img/codespaces.png
 
 The browser is divided into three sections: on the left is a file explorer, listing all of the files in this repository. The top right shows whatever file you're currently viewing or editing, defaulting to README.md. The bottom right shows the terminal, where we'll run commands.
 
@@ -102,22 +102,15 @@ Act 2: The command line
 ***********************
 
 Working with Python (and pretty much any other programming language)
-means becoming comfortable with your computer's command line
-environment. If you haven't seen it before, it looks something like
-this:
-
-.. figure:: _static/img/terminal.png
-  :width: 600 px
+means becoming comfortable with the command line
+environment.
 
 In this lesson we'll be using it to give the computer direct commands to manage files, navigate through directories and execute Python scripts. Don't worry, it'll only require only a few basic commands we'll cover now.
-
-Open the command-line program for your operating system and let's get started.
-If you need help finding it refer to the prequisite instructions for the :ref:`command-line-prereq`.
 
 Print the current directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once your terminal window is open the first thing we want to do if find out where you are. If you're using OSX or Linux, type this:
+The first thing we want to do if find out where you are. Type this:
 
 .. code:: bash
 
@@ -128,13 +121,7 @@ Once your terminal window is open the first thing we want to do if find out wher
     You don't have to type the "$". It's a generic symbol
     geeks use to show they're working on the command line.
 
-If you're on Windows try:
-
-.. code:: bash
-
-    $ cd
-
-The terminal should print out your current location relative to the root of your computer's filesystem. In this case, you're probably in the default directory for your user, also known as your **home** directory.
+The terminal should print out your current location relative to the root of your computer's filesystem. In this case, you're probably in the default directory codespaces, which is "/workspaces/{name of your repository}"
 
 It's easy to lose track of which folder you're in when
 you're working from the command line, so this is a helpful tool for
@@ -150,21 +137,13 @@ List files in a directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to see all the files and folders in a directory, there's
-another command you need to learn.  On OSX and Linux, type:
+another command you need to learn. Go ahead and type:
 
 .. code:: bash
 
     $ ls
 
-On Windows:
-
-.. code:: bash
-
-    $ dir
-
-You should now see a list of files and folders appear, such as Downloads, Documents, Desktop, etc. These should look a little familiar. The command line is just another way of navigating the directory structure you're probably used to seeing when
-clicking around your computer's folders in the user-interface provided
-by your operating system.
+You should now see a list of files and folders appear from the current directory.
 
 Change directories
 ~~~~~~~~~~~~~~~~~~
@@ -173,11 +152,11 @@ Now let's move. In order to change directories from the command line, we'll
 return to the ``cd`` command we saw earlier, which works for OSX, Linux and Windows.
 
 The only thing you need to do is tell it which directory to move into. In this
-case, the following will probably drop you on your desktop.
+case, the following will get you into the `docs` directory:
 
 .. code:: bash
 
-    $ cd Desktop
+    $ cd docs
 
 Now run ``ls`` or ``dir`` to see what files we can find there. They should
 mirror what you see as you look at your desktop in your operating system's
@@ -197,32 +176,24 @@ Creating directories and files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You might also find it useful sometimes to create files and directories
-from the command line. Let's create a folder called ``Code`` under our
-home directory that we can use to store code from this class.
+from the command line. Let's create a folder called ``scrapers`` under our
+home directory that we can use to store code from this tutorial.
 
-Using OSX or Linux, here's how:
-
-.. code:: bash
-
-    $ mkdir Code
-
-In Windows, try this:
+Here's how:
 
 .. code:: bash
 
-    $ md Code
+    $ mkdir scrapers
 
 Next let's jump into the directory. If you remember, that goes like this:
 
 .. code:: bash
 
-    $ cd Code
+    $ cd scrapers
 
 If you type ``ls`` or ``dir`` you'll notice that nothing is there. That's because all we've done so far is create a directory, but we haven't put any files in it yet.
 
-You won't have to do this very often, but the command for
-creating a blank file in OSX and Linux is called ``touch``. So here's how
-you make a new file named ``test.py``.
+You won't have to do this very often, but the command for creating a blank file in OSX and Linux is called ``touch``. So here's how you make a new file named ``test.py``.
 
 .. code:: bash
 
@@ -234,17 +205,11 @@ a file from a text editor or other program into our new directory.
 Deleting directories and files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you wanted to remove the file you just made, here's how on OSX and Linux:
+If you wanted to remove the file you just made, here's how:
 
 .. code:: bash
 
     $ rm test.py
-
-And here's how in Windows:
-
-.. code:: bash
-
-    $ del test.py
 
 .. warning::
 
@@ -268,7 +233,7 @@ A Python file is nothing more than a text file that has the extension ".py" at t
 
   $ python filename.py
 
-That's it. And it works for both OSX and Windows.
+That's it. And it works pretty much everywhere.
 
 Python also comes with a very neat feature called an **interactive interpreter**, which allows you to execute Python code one line at a time, sort of like working from the command line.
 
@@ -295,13 +260,7 @@ Variables are like containers that hold different types of data so you
 can go back and refer to them later. They're fundamental to programming
 in any language, and you'll use them all the time.
 
-To try them out, open your Python interpreter.
-
-.. code:: bash
-
-    $ python
-
-Now let's start writing Python!
+To try them out, let's go to your Python interpreter and start writing Python!
 
 .. code:: python
 
@@ -726,14 +685,12 @@ The scraper will use Python's `BeautifulSoup <https://www.crummy.com/software/Be
 
 We'll also use the `Requests library <https://docs.python-requests.org/en/latest/>`_ to open the URL, download the HTML and pass it to BeautifulSoup.
 
-Since they are not included in Python's standard library, we'll first need to install them using ``pipenv``, a command-line tool that can grab open-source libraries off the web. If you don't have it installed, you'll need to follow the prequisite instructions for :ref:`command-line-pip`.
-
-In Windows, OSX or Linux try this:
+Since they are not included in Python's standard library, we'll first need to install them using ``pip``, a command-line tool that can grab open-source libraries off the web. It comes installed in our codespace, so we can just use it after exiting the Python interpreter by hitting Control-D:
 
 .. code:: bash
 
-    $ pipenv install bs4
-    $ pipenv install requests
+    $ pip install bs4
+    $ pip install requests
 
 Analyzing the HTML
 ~~~~~~~~~~~~~~~~~~
@@ -789,17 +746,21 @@ Extracting an HTML table
 
 Now that we know where to find the data we're after, it's time to write script to pull it down and save it to a comma-delimited file.
 
-Let's start by creating a Python file to hold our scraper. First jump into the ``Code`` directory we made at the beginning of this lesson.
+Let's start by creating a Python file to hold our scraper. First jump into the ``scrapers`` directory we made at the beginning of this lesson and then create another directory called ``legislature``:
 
 .. code:: bash
 
-    $ cd Code
+    $ cd scrapers
+    $ mkdir legislature
+    $ cd legislature
 
 .. note::
 
-    You'll need to ``mkdir Code`` (or ``md Code`` in Windows) if you haven't made this directory yet.
+    You'll need to ``mkdir scrapers`` if you haven't made this directory yet.
 
-Then open your text editor and save an empty file into the directory name ``scrape.py`` and we're ready to begin. The first step is to import the requests library and download the state webpage.
+Then, on the left side of your codespace, right-click on the ``scrapers/legislature`` directory and choose "New File" and name it ``scrape.py``.
+
+The first step is to import the requests library and download the state webpage.
 
 .. code-block:: python
 
@@ -1108,7 +1069,7 @@ Our headers are now there, but there's still a problem here: the URLs are relati
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    outfile = open("./reports.csv", "w")
+    outfile = open("reports.csv", "w")
     writer = csv.writer(outfile)
     writer.writerow(["date", "type", "url", "title"])
     writer.writerows(list_of_rows)
