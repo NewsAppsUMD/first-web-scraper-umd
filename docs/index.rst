@@ -676,7 +676,7 @@ Act 3: Web scraping
 
 Now that we've covered all the fundamentals, it's time to get to work and write a web scraper.
 
-The target is a regularly updated `list of reports from Maryland's Office of Legislative Audits <https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo=>`_. These include audits of state and local government agencies as well as presentations to the state Legislature.
+The target is a regularly updated `list of disciplinary alerts from Maryland's Board of Physicians <https://www.mbp.state.md.us/disciplinary.aspx>`_. These include doctors who have had their medical licenses suspended or revoked for misconduct, as well as the lifting of suspensions.
 
 Installing dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -689,8 +689,8 @@ Since they are not included in Python's standard library, we'll first need to in
 
 .. code:: bash
 
-    $ pip install bs4
     $ pip install requests
+    $ pip install bs4
 
 Analyzing the HTML
 ~~~~~~~~~~~~~~~~~~
@@ -709,7 +709,7 @@ By the time we're finished, we want to have extracted that data, now encrusted i
 
 In order to scrape a website, we need to understand how a typical webpage is put together.
 
-To view the HTML code that makesup this page () open up a browser and visit `our target <https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo=>`_. Then right click with your mouse and select "View Source." You can do this for any page on the web.
+To view the HTML code that makes up this page, open up a browser and visit `our target <https://www.mbp.state.md.us/disciplinary.aspx>`_. Then right click with your mouse and select "View Source." You can do this for any page on the web.
 
 .. figure:: _static/img/source.png
 
@@ -735,11 +735,11 @@ At this stage, your job is to find a pattern or identifier in the code for the e
 In the best cases, you can extract content by using the ``id`` or ``class`` already assigned to the element you'd like to extract. An 'id' is intended to act as the unique identifer a specific item on a page. A 'class' is used to label a
 specific type of item on a page. So, there maybe may instances of a class on a page.
 
-On the Office of Legislative Audits page, there is only one table in the HTML's ``body`` tag. The table is identified by an id.
+On the Board of Physicians page, there is only one table in the HTML's ``body`` tag. The table is identified by a class.
 
 .. code:: html
 
-    <table id="searchResultsTable" class="display wrapped">
+    <table class="table table-hover">
 
 Extracting an HTML table
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -751,14 +751,14 @@ Let's start by creating a Python file to hold our scraper. First jump into the `
 .. code:: bash
 
     $ cd scrapers
-    $ mkdir legislature
-    $ cd legislature
+    $ mkdir physicians
+    $ cd physicians
 
 .. note::
 
     You'll need to ``mkdir scrapers`` if you haven't made this directory yet.
 
-Then, on the left side of your codespace, right-click on the ``scrapers/legislature`` directory and choose "New File" and name it ``scrape.py``.
+Then, on the left side of your codespace, right-click on the ``scrapers/physicians`` directory and choose "New File" and name it ``scrape.py``.
 
 The first step is to import the requests library and download the state webpage.
 
@@ -766,8 +766,8 @@ The first step is to import the requests library and download the state webpage.
 
     import requests
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
-    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0'})
     html = response.content
     print(html)
 
@@ -785,8 +785,8 @@ Next import the ``BeautifulSoup`` HTML parsing library and feed it the page.
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
-    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0'})
     html = response.content
 
     soup = BeautifulSoup(html, features="html.parser")
@@ -806,7 +806,7 @@ Next we take all the detective work we did with the page's HTML above and conver
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -814,7 +814,7 @@ Next we take all the detective work we did with the page's HTML above and conver
     table = soup.find('tbody')
     print(table.prettify())
 
-Save the file and run ``scrape.py`` again. This time it only prints out the table we're after, which was selected by instructing BeautifulSoup to return only those ``<table>`` tags with ``resultsTable`` as their class attribute.
+Save the file and run ``scrape.py`` again. This time it only prints out the table we're after, which was selected by instructing BeautifulSoup to return the ``<tbody>`` tag, which is the body of the table.
 
 .. code:: bash
 
@@ -830,7 +830,7 @@ BeautifulSoup gets us going by allowing us to dig down into our table and return
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -854,7 +854,7 @@ Next we can loop through each of the cells in each row by select them inside the
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -881,7 +881,7 @@ Let's start by adding each cell in a row to a new Python list, and we'll strip o
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -909,7 +909,7 @@ Those lists can now be lumped together into one big list of lists, which, when y
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -940,7 +940,7 @@ We've got much of the information we want, but there's an important thing missin
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -970,7 +970,7 @@ To write that list out to a comma-delimited file, we need to import Python's bui
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -987,7 +987,7 @@ To write that list out to a comma-delimited file, we need to import Python's bui
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    outfile = open("./reports.csv", "w")
+    outfile = open("alerts.csv", "w")
     writer = csv.writer(outfile)
     writer.writerows(list_of_rows)
 
@@ -1015,7 +1015,7 @@ But rather than bend over backwords to dig them out of the page, let's try somet
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -1032,9 +1032,9 @@ But rather than bend over backwords to dig them out of the page, let's try somet
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    outfile = open("./reports.csv", "w")
+    outfile = open("alerts.csv", "w")
     writer = csv.writer(outfile)
-    writer.writerow(["date", "type", "url", "title"])
+    writer.writerow(["url", "name", "type", "date"])
     writer.writerows(list_of_rows)
 
 Save and run the script once more.
@@ -1052,7 +1052,7 @@ Our headers are now there, but there's still a problem here: the URLs are relati
     import requests
     from bs4 import BeautifulSoup
 
-    url = 'https://www.ola.state.md.us/Search/Report?keyword=&agencyId=&dateFrom=&dateTo='
+    url = 'https://www.mbp.state.md.us/disciplinary.aspx'
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     html = response.content
 
@@ -1064,14 +1064,14 @@ Our headers are now there, but there's still a problem here: the URLs are relati
         list_of_cells = []
         for cell in row.find_all('td'):
             if cell.find('a'):
-                list_of_cells.append("https://www.ola.state.md.us" + cell.find('a')['href'])
+                list_of_cells.append("https://www.mbp.state.md.us" + cell.find('a')['href'])
             text = cell.text.strip()
             list_of_cells.append(text)
         list_of_rows.append(list_of_cells)
 
-    outfile = open("reports.csv", "w")
+    outfile = open("alerts.csv", "w")
     writer = csv.writer(outfile)
-    writer.writerow(["date", "type", "url", "title"])
+    writer.writerow(["url", "name", "type", "date"])
     writer.writerows(list_of_rows)
 
 Save and run the script once more.
